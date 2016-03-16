@@ -1,5 +1,14 @@
+if(Meteor.isClient){
+while(document.getElementById("lat1")!== null)
+var lat1=document.getElementById("lat1");
+var lon1=document.getElementById("lon1");
+var lat2=document.getElementById("lat2");
+var lon2=document.getElementById("lon2");
+console.log(lat1);
 
-function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+
+
+var getDistanceFromLatLonInKm=function(lat1,lon1,lat2,lon2) {
   var R = 6371; // Radius of the earth in km
   var dLat = deg2rad(lat2-lat1);  // deg2rad below
   var dLon = deg2rad(lon2-lon1); 
@@ -10,9 +19,20 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
     ; 
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
   var d = R * c; // Distance in km
+  console.log(d);
+  console.log(lat1);
   return d;
 }
 
 function deg2rad(deg) {
   return deg * (Math.PI/180)
+}
+
+
+var solution=document.getElementById("solution").addEventListener("click",getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2));
+
+console.log("distance should be : " + solution);
+
+document.getElementById("solution").innerHTML=solution;
+
 }

@@ -1,22 +1,29 @@
-<head>
+ <head>
   <title>centroid-app</title>
 </head>
 
 <body>
  
-</body>
 
-<template name="mainPage">
+
+<p>
 
 	<form>
-		<input type="number" id="friend1"/>
-		<input type="number" id="friend2"/>
-		<input type="number" id="friend3"/>
+		<div id="point1">
+			<label>point 1</label>
+			<input type="text"  id="lat1"/>
+			<input type="text" id="lon1"/>
+		</div>
+		<div>
+			<label id="point2">point 2</label>
+			<input type="text" id="lat2"/>
+			<input type="text" id="lon2"/>
+		</div>	
 		<button type="submit" id="calculate-butt">Calculate</button>
 	</form>
-	<div id="answer">
-		
-	</div>	
 
+</p>
 
-</template>
+	<h3 id="solution"></h3>
+
+</body>
