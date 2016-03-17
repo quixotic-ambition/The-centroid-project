@@ -3,27 +3,33 @@
 </head>
 
 <body>
- 
-
-
+{{>mainPage}} 
+</body>
+<template name="mainPage">
 <p>
 
-	<form>
+	<form class="mainForm">
 		<div id="point1">
-			<label>point 1</label>
+			<label>friend 1</label>
 			<input type="text"  id="lat1"/>
-			<input type="text" id="lon1"/>
+			<input type="text" name="lon1"/>
 		</div>
 		<div>
-			<label id="point2">point 2</label>
-			<input type="text" id="lat2"/>
-			<input type="text" id="lon2"/>
+			<label id="point2">friend 2</label>
+			<input type="text" name="lat2"/>
+			<input type="text" name="lon2"/>
+		</div>
+		<div>
+			<label id="point2">friend 3</label>
+			<input type="text" name="lat3"/>
+			<input type="text" name="lon3"/>
 		</div>	
 		<button type="submit" id="calculate-butt">Calculate</button>
 	</form>
 
 </p>
 
-	<h3 id="solution"></h3>
+	<h3 id="solution">{{printSolution}}</h3>
+</template>
+	
 
-</body>
