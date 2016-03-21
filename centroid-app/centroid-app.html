@@ -1,17 +1,18 @@
  <head>
   <title>centroid-app</title>
 </head>
-
+ 
 <body>
 {{>mainPage}} 
 </body>
 <template name="mainPage">
+
 <p>
 
 	<form class="mainForm">
 		<div id="point1">
 			<label>friend 1</label>
-			<input type="text"  id="lat1"/>
+			<input type="text" name="lat1"/>
 			<input type="text" name="lon1"/>
 		</div>
 		<div>
@@ -30,6 +31,12 @@
 </p>
 
 	<h3 id="solution">{{printSolution}}</h3>
+
+  <div class="map-container" id="mc">
+    {{> googleMap name="centMap" options=exampleMapOptions}}
+  </div>
+
+
 </template>
 	
 
